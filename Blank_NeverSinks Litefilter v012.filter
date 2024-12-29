@@ -58,14 +58,14 @@ SetTextColor 255 215 0
 SetBorderColor 255 215 0
 PlayEffect Orange Temp
 MinimapIcon 1 Yellow Circle
-PlayAlertSound 15 300
+#PlayAlertSound 15 300
 
 Hide
 BaseType == "Gold"
 SetTextColor 255 215 0
 SetBorderColor 255 215 0
 SetBackgroundColor 0 0 0 180
-#MinimapIcon 2 Yellow Circle
+MinimapIcon 2 Yellow Circle
 
 #--------------------------
 # Uncut Gems
@@ -109,7 +109,7 @@ Rarity Rare
 SetTextColor 0 240 190
 SetBorderColor 0 240 190
 SetFontSize 40
-MinimapIcon 1 Cyan UpsideDownHouse
+MinimapIcon 2 Cyan UpsideDownHouse
 PlayEffect Cyan
 PlayAlertSound 10 100
 
@@ -120,15 +120,28 @@ Rarity Magic
 SetTextColor 0 240 190
 SetBorderColor 0 240 190
 SetFontSize 40
-MinimapIcon 1 Cyan UpsideDownHouse
+MinimapIcon 2 Cyan UpsideDownHouse
 PlayEffect Cyan Temp
 PlayAlertSound 10 100
 
 # Special B Tier - Any Runes and Charms
 Hide 
-BaseType " Rune" " Charm"
+BaseType " Rune"
+SetTextColor 0 240 190
+PlayEffect Blue Temp
+MinimapIcon 2 Blue UpsideDownHouse
+
+Hide 
+BaseType " Charm"
+SetTextColor 0 240 190
+
+Hide 
+BaseType " Charm"
+Quality > 0
 SetTextColor 0 240 190
 PlayEffect Cyan Temp
+MinimapIcon 2 Cyan Moon
+
 
 #--------------------------
 # Socketables and Special Character Equipment
@@ -161,11 +174,11 @@ SetFontSize 40
 Hide
 Class "Currency"
 BaseType "Distilled" "Catalyst" "Essence of" "Omen of"
-SetTextColor 255 207 132
-SetBorderColor 255 207 132
-SetBackgroundColor 76 51 12
+SetTextColor 0 200 255
+SetBorderColor 0 200 255
+SetBackgroundColor 60 50 100 
 PlayAlertSound 2 300
-PlayEffect White
+PlayEffect Blue
 MinimapIcon 1 Blue Raindrop
 
 # Currency Tier C: Vaal, Chaos, Exalt, Exotic
@@ -174,7 +187,7 @@ Class "Currency"
 BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Chance Shard"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
-PlayAlertSound 11 200
+#PlayAlertSound 11 200
 MinimapIcon 2 Grey Circle
 
 Hide
@@ -182,7 +195,7 @@ Class "Currency"
 BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact" 
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
-PlayAlertSound 1 300
+PlayAlertSound 2 300
 PlayEffect White
 MinimapIcon 1 White Cross
 
@@ -222,6 +235,22 @@ MinimapIcon 1 White Square
 SetFontSize 40
 
 #--------------------------
+# Chanced
+#--------------------------
+
+Hide
+Class "Rings" "Amulets" "Belts"
+BaseType "Emerald Ring" "Amethyst Ring" "Sapphire Ring" "Topaz Ring" "Pearl Ring" "Gold Ring" "Azure Amulet" "Crimson Amulet" "Amber Amulet" "Jade Amulet" "Stellar Amulet" "Solar Amulet" "Gold Amulet" "Ornate Belt" "Heavy Belt"
+Rarity Normal
+SetFontSize 40
+SetBorderColor 200 100 0
+SetFontSize 40
+MinimapIcon 0 Orange Pentagon
+
+#"Furtive Wraps" "Stone Tower Shield" "Smuggler Coat" "Armoured Cap" "Heavy Crown" "Feathered Tiara" "Tribal Mask" "Fine Bracers" 
+
+
+#--------------------------
 # Value Rares
 #--------------------------
 
@@ -232,7 +261,7 @@ SetFontSize 40
 SetTextColor 233 206 75
 SetBorderColor 233 206 75
 PlayEffect Yellow
-MinimapIcon 2 Yellow Pentagon
+#MinimapIcon 2 Yellow Pentagon
 
 #--------------------------
 # Rings, Amulets, Belts
@@ -242,13 +271,13 @@ Hide
 Rarity Normal
 Class "Rings" "Amulets" "Belts"
 SetFontSize 40
-MinimapIcon 2 White Pentagon
+#MinimapIcon 2 White Pentagon
 
 Hide
 Class "Rings" "Amulets" "Belts"
 Rarity Magic
 SetFontSize 40
-MinimapIcon 2 Blue Pentagon
+#MinimapIcon 2 Blue Pentagon
 
 #--------------------------
 # Salvagable Items
@@ -257,12 +286,6 @@ MinimapIcon 2 Blue Pentagon
 # Not working!
 Hide
 Sockets > 0
-Rarity Normal
-SetBorderColor 200 200 200
-SetFontSize 35
-
-Hide
-Quality > 10
 Rarity Normal
 SetBorderColor 200 200 200
 SetFontSize 35
@@ -291,12 +314,18 @@ SetFontSize 40
 MinimapIcon 1 Blue Diamond
 
 Hide
-Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "Focus"
+#Class "Body" "Helmet" "Boots" "Gloves" "Shields" "Quiver" "Mace" "Staff" "Quarter" "Bow" "Crossbow" "Wand" "Sceptre" "Focus"
 Quality > 0
 Rarity <= Rare
 SetBorderColor 0 0 200
 SetFontSize 35
 MinimapIcon 2 White Diamond
+
+Hide
+Quality > 10
+Rarity <= Rare
+SetBorderColor 200 200 200
+SetFontSize 35
 
 #--------------------------
 # OPTIONAL RULES
